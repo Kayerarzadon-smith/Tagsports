@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    {% load static %}
+    <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel="stylesheet" href="{% static 'Tagsports_app/css/result.css' %}" media="screen" title="Results"  charset="utf-8">
+    <style>
+            img {
+                width: 175px;
+                display: inline-block;
+            }
+            .navBarLogo{
+                padding: 4px;
+                width: 175px;
+                display: inline-block;
+                margin-left: 10px;
+            }
+    </style>
+</head>
+<body>
+    <div class="navBar">
+        <div class="navBarLogo">
+            <a href="/"><img class="navBarLogo" src="../static/Tagsports_app/images/logo.png" alt="logo"></a>
+        </div>
+        <div class="navItem">
+            <a>Company</a>
+            <a>Products</a>
+        </div>
+    </div>
+    <div class="backdrop">
+        <div class="submittedInfoHeader">
+            <h2>Submitted Information</h2>
+        </div>
+        <div class="submittedInfoBox">
+            <label><b>Your Name: </b></label>{{request.session.name}}<br>
+            <label><b>Email: </b></label>{{request.session.email}}<br>
+		    <label><b>Phone: </b></label>{{request.session.phone}}<br>
+            <label><b>Address: </b></label><br>{{request.session.street}}<br>
+                                                {{request.session.city}}, {{request.session.state}} {{request.session.zipcode}}<br>
+            <label><b>Organization Name: </b></label>{{request.session.organization}}<br>  
+            <label><b>Sport: </b></label>{{request.session.sport}}<br> 
+            <label><b>Team Colors: </b></label>{{request.session.colors}}<br>  
+            <label><b>Helmet Color: </b></label>{{request.session.helmet}}<br>   
+            <label><b>Website: </b></label>{{request.session.website}}<br>     
+            <label><b>Special Instructions: </b></label>{{request.session.instructions}}<br>   
+            <a href="/"><button class="requestButton">Request Sample</button></a> <a href="/"><button>Edit</button></a>
+        </div>
+    </div>              
+    <div class="footer">
+        <div class="footercontainer">
+            <div class="footerlogo">
+                    <a href="/"><img src="../static/Tagsports_app/images/logo.png" alt="logo"></a>
+                    <p>
+                        TAGSports.net<br>
+                        5779 N Lilybrook Way,<br>
+                        Boise, Idaho 83713
+                    </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

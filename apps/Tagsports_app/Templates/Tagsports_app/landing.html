@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <meta charset="utf-8">
+        <title>Tagsports</title>
+        {% load static %}
+        <!-- The line above tells Django to be ready to listen for static files -->
+        <link rel="stylesheet" href="{% static 'Tagsports_app/css/landings.css' %}" media="screen" title="Tagsports"  charset="utf-8">
+        <!-- Put the static files in the static folder inside your app.  Django collects files within all static folders and puts them within a single folder -->    
+        <style>
+            img {
+                width: 175px;
+                display: inline-block;
+            }
+            .navBarLogo{
+                padding: 4px;
+                width: 175px;
+                display: inline-block;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navBar">
+            <div class="navBarLogo">
+                <a href="/"><img class="navBarLogo" src="../static/Tagsports_app/images/logo.png" alt="logo"></a>
+            </div>
+            <div class="navItem">
+                <a>Company</a>
+                <a>Products</a>
+            </div>
+        </div>
+        <div class="backdrop">
+            <div class="formHeader">
+                <h2>Upload Your Logo Here</h2>
+            </div>
+            <div class="formbox">
+                <form action ="sample/process" method="POST">
+                    {% csrf_token %}
+                    <label class="nameLabel">Name: </label><input type="text" class="name" name="name" placeholder="your name"><br>
+                    <label class="emailLabel">Email: </label><input type="text" class="email" name="email" placeholder="Email">
+                    <label class="phoneLabel">Phone: </label><input type="text" class="phone" name="phone" placeholder="Phone"><br>
+                    <label class="streetLabel">Street: </label><input type="text" class="street" name="street" placeholder="Street">
+                    <label class="cityLabel">City: </label><input type="text" class="city" name="city" placeholder="City">
+                    <label class="stateLabel">State: </label><select class="state" name="state">
+                                                                <option></option>
+                                                                <option>AK</option>
+                                                                <option>AZ</option>
+                                                                <option>AR</option>
+                                                                <option>CA</option>
+                                                                <option>CO</option>
+                                                                <option>AL</option>
+                                                                <option>AL</option>
+                                                                <option>AL</option>
+                                                                <option>AL</option>
+                                                                <option>AL</option>
+                                                                <option>AL</option>
+                                                            </select>
+                    <label class="zipcodeLabel">Zip: </label><input type="text" class="zipcode" name="zipcode" placeholder="Zip"><br>
+                    <label class="organizationLabel">Organization: </label><input type="text" class="organization" name="organization" placeholder="Organization Name">
+                    <label class="sportLabel">Sport: </label><input type="text" class="sport" name="sport" placeholder="your name"><br>
+                    <label class="colorsLabel">Team Colors: </label><input type="text" class="colors"  name="colors" placeholder="Team Colors">
+                    <label class="helmetLabel">Helmet Color: </label><input type="text" class="helmet" name="helmet" placeholder="Helmet Color"><br>
+                    <label class="websiteLabel">Website: </label><input type="text" class="website" name="website" placeholder="Website"><br>
+                    <label class="instructionsLabel">Special Instructions: </label><input type="text" class="instructions" name="instructions" placeholder="Write down special instructions (if any)"><br>
+                    <input class="submitButton" type="submit" value="submit">
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footercontainer">
+                <div class="footerlogo">
+                    <a href="/"><img class="footerLogo" src="../static/Tagsports_app/images/logo.png" alt="logo"></a>
+                    <p>
+                        TAGSports.net<br>
+                        5779 N Lilybrook Way,<br>
+                        Boise, Idaho 83713
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,158 @@
+html, body {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    top: 0;
+    margin: 0; 
+}
+
+
+/* NAVIGATION BAR */
+
+.navBar{
+    width:100%;
+    height: 65px;
+    position: fixed;
+    background-color: navy;
+}
+
+.navItem{
+    float: right;
+    margin: 10px;
+    display: flex;
+    box-sizing: border-box;  
+}
+
+.navItem a {
+    color: white;  
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;  
+    font-size: 17px;
+}         
+.navItem a:hover,
+.navItem a:active,
+.navItem a:active {
+    color: orangered;
+}
+
+.backdrop {
+    background-position: center;
+    width: auto;
+    height: auto;
+    padding-top: 125px;
+    padding-bottom: 250px;
+    background:
+    linear-gradient(
+        rgb(0, 0, 0), 
+        rgba(75, 75, 75, 0.468),
+        rgb(0, 0, 0)
+      ), url('../images/NotreDame.jpg');
+    background-size: 100%; 
+    background-repeat: no-repeat;
+}
+
+
+
+.submittedInfoHeader {
+    width: 600px;
+    height: 50px;
+    margin: auto;
+    padding: 10px;
+    background: navy;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+        .submittedInfoHeader h2 {
+            color: white;
+            text-align: center;
+        }
+    @media screen and (max-width: 600px) and (min-width: 100px) {
+        .submittedInfoHeader{
+            width: auto;
+            height: 50px;
+            margin: auto;
+            background-color: navy;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+    }
+     
+
+    .submittedInfoBox {
+        width: 600px;
+        height: auto;
+        margin: auto;
+        padding: 10px;
+        overflow: auto;
+        background-color: white;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    @media screen and (max-width: 600px) and (min-width: 100px) {
+        .submittedInfoBox{
+            width: auto;
+            height: auto;
+            margin: auto;
+            overflow: auto;
+            padding: 10px;
+            background-color: white;
+            overflow: scroll;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+    }
+
+    button {
+        margin: 10px 2px 5px 10px;
+        height: 30px;
+        border-radius: 5px;
+        width: 80px;
+        float: right;
+        background-color:orangered;
+        color: white;
+    }
+    button:hover {
+        height: 30px;
+        border-radius: 5px;
+        width: 80px;
+        float: right;
+        background-color:orange;
+        color: white;
+    }
+
+/* FOOTER */
+.footer {
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background: navy; 
+}
+
+.footercontainer {
+    width: 50%;
+    height: 300px;
+    margin: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+.footerlogo {
+    width: auto;
+    height: auto; 
+    margin: auto;
+    display: block;
+}
+
+.footercontainer p {
+    padding-top: 10px;
+    width: auto;
+    margin: auto;
+    text-align:center;
+    color: white;
+}
